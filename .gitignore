@@ -11,3 +11,5 @@ jspm_packages/
 TestReport/*
 .env
 .env.test
+mochawesome-report/*
+cypress/videos/*
