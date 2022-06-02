@@ -11,6 +11,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm i
+      - run: echo "test"
       - run:
           command: node utility/cypress.env.js
           environment:

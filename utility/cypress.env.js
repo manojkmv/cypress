@@ -17,7 +17,6 @@ const env = {
     }
 }
 
-
 console.log('cypress env');
 fs.writeFileSync(path.join(__dirname, '../cypress.json'), JSON.stringify(env));
 console.log('cyp env comp');
