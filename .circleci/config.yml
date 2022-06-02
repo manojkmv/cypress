@@ -1,0 +1,24 @@
+version: 2
+orbs:
+  cypress: cypress-io/cypress@1
+jobs:
+  build:
+    docker:
+      - image: cypress/base:14.16.0
+    working_directory: ~/cypress
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm i
+      - run:
+          command: node utility/cypress.env.js
+          environment:
+            URL: https://poachedtest.com/login
+            EMAIL: posterautomation06+50@gmail.com
+            PASSWORD: Poached@123
+      - run: npx cypress run --headless --record
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
