@@ -11,9 +11,9 @@ const env = {
         "json": true
     },
     "env": {
-        URL: "https://poachedtest.com/login",
-        EMAIL: "posterautomation06+50@gmail.com",
-        PASSWORD: "Poached@123"
+        URL: process.env.URL,
+        EMAIL: process.env.EMAIL,
+        PASSWORD: process.env.PASSWORD
     }
 }
 
